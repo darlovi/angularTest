@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-product-list',
@@ -7,9 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductListComponent implements OnInit {
 
-  constructor() { }
+  mostrar = true;
+
+  list: { name: string, id: number }[] = [];
+
+  constructor() {
+  }
 
   ngOnInit() {
+    for (let i = 0; i < 10; i++) {
+      this.list.push({
+        name: 'Whatever' + i,
+        id: i,
+      });
+    }
+  }
+
+  isShow() {
+    return this.mostrar;
   }
 
 }

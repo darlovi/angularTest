@@ -1,3 +1,12 @@
-<p>
+<p *ngIf="isShow()">
   product-list works!
 </p>
+
+
+<div>
+  <span>ID  </span> <span>       NOMBRE</span>
+</div>
+
+<div *ngFor="let user of list">
+  <span>{{user.id + 9}} </span> <span>     {{user.name}} </span>
+</div>
