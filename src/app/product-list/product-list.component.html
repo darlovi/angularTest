@@ -1,4 +1,4 @@
-<p *ngIf="isShow()">
+<p>
   product-list works!
 </p>
 
@@ -8,5 +8,17 @@
 </div>
 
 <div *ngFor="let user of list">
-  <span>{{user.id + 9}} </span> <span>     {{user.name}} </span>
+  <ng-template [ngIf]="isShow(user)">
+
+    <span>{{user.id}} </span> <span>     {{user.name}} </span>
+  </ng-template>
+
+    <div style="margin-bottom: 10px" *ngIf="!isShow(user)">
+      Esta es la descripcion del usuario: {{user.id}}
+    </div>
+
+  <div style="margin-bottom: 10px" [hidden]="!isShow(user)">
+    Esta es la descripcion del usuario no eliminada: {{user.id}}
+  </div>
+
 </div>

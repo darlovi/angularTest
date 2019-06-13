@@ -23,8 +23,8 @@ export class ProductListComponent implements OnInit {
     }
   }
 
-  isShow() {
-    return this.mostrar;
+  isShow(item) {
+    return item.id % 2;
   }
 
 }
