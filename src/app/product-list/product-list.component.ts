@@ -11,6 +11,9 @@ export class ProductListComponent implements OnInit, OnDestroy {
 
   mostrar = true;
 
+  search = 'Hola';
+
+  original: { name: string, id: number, date: Date }[] = [];
 
   list: { name: string, id: number, date: Date }[] = [];
 
@@ -19,7 +22,8 @@ export class ProductListComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.list = this.listService.getList();
+    this.original = this.listService.getList();
+    this.list = JSON.parse(JSON.stringify(this.original));
   }
 
 
@@ -43,4 +47,14 @@ export class ProductListComponent implements OnInit, OnDestroy {
     // console.log(param);
   }
 
+  searchChange(valor) {
+    this.search = valor;
+    console.log(valor);
+  }
+
+  onSearch() {
+    this.list = this.original.filter((obj) => obj.name.startsWith(this.search));
+
+    console.log(this.list);
+  }
 }

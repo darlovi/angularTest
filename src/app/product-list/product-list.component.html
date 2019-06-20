@@ -4,6 +4,18 @@
   </div>
 </div>
 
+<div class="row">
+  <div class="col-6">
+    <div class="form-group">
+      <label for="search">Buscador</label>
+      <input type="text" [(ngModel)]="search"  class="form-control" id="search">
+    </div>
+    <div class="col-4">
+      <button class="btn btn-success" (click)="onSearch()">Buscar</button>
+    </div>
+  </div>
+</div>
+
 <div class="row mt-5">
   <div class="col-12">
     <table class="table">
@@ -24,7 +36,6 @@
           <span
             appColorStatus
             [item]="product"
-            *ngIf="isShow(product)"
             [ngClass]="{
                          'text-warning': product.id === 3,
                          'text-danger': product.id === 5
@@ -32,7 +43,7 @@
             Esto es la descripcion del producto {{product.id}}
           </span>
         </td>
-        <td>{{transformDate(product.date)}}</td>
+        <!--<td>{{transformDate(product.date)}}</td> -->
         <td>{{product.date | date: 'dd/MM/yyyy' : 'UTC'}}</td>
         <!--<td>{{product.date | isodate}}</td>-->
       </tr>
