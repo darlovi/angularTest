@@ -4,17 +4,9 @@
   </div>
 </div>
 
-<div class="row">
-  <div class="col-6">
-    <div class="form-group">
-      <label for="search">Buscador</label>
-      <input type="text" [(ngModel)]="search"  class="form-control" id="search">
-    </div>
-    <div class="col-4">
-      <button class="btn btn-success" (click)="onSearch()">Buscar</button>
-    </div>
-  </div>
-</div>
+
+<app-product-filter [(search)]="search" (searchClick)="onSearch($event)"></app-product-filter>
+
 
 <div class="row mt-5">
   <div class="col-12">

@@ -8,13 +8,15 @@ import {IsodatePipe} from './isodate.pipe';
 import {ListService} from './list.service';
 import { ColorStatusDirective } from './color-status.directive';
 import {FormsModule} from '@angular/forms';
+import { ProductFilterComponent } from './product-filter/product-filter.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductListComponent,
     IsodatePipe,
-    ColorStatusDirective
+    ColorStatusDirective,
+    ProductFilterComponent
   ],
   imports: [
     BrowserModule,
