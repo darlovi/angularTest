@@ -9,6 +9,7 @@ import {ListService} from './list.service';
 import { ColorStatusDirective } from './color-status.directive';
 import {FormsModule} from '@angular/forms';
 import { ProductFilterComponent } from './product-filter/product-filter.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ProductFilterComponent } from './product-filter/product-filter.componen
     ProductListComponent,
     IsodatePipe,
     ColorStatusDirective,
-    ProductFilterComponent
+    ProductFilterComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
