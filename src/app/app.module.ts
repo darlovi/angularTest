@@ -7,7 +7,7 @@ import {ProductListComponent} from './product-list/product-list.component';
 import {IsodatePipe} from './isodate.pipe';
 import {ListService} from './list.service';
 import { ColorStatusDirective } from './color-status.directive';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ProductFilterComponent } from './product-filter/product-filter.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 
@@ -23,6 +23,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     FormsModule
   ],
   providers: [IsodatePipe, ListService],

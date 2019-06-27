@@ -22,4 +22,13 @@ export class ListService {
     }
     return this.list;
   }
+
+  save(item) {
+    this.list.push(item);
+  }
+
+  update(item) {
+    const exist = this.list.find((value) => value.id === item.id);
+    exist.name = item.name;
+  }
 }
