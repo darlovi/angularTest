@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import {ListService} from '../list.service';
+import {ListService} from '../shared/services/list.service';
 import {Location} from '@angular/common';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
@@ -32,7 +32,7 @@ export class ProductDetailComponent implements OnInit {
     console.log(list);
     list.find((value) => value.id === parseInt(this.route.snapshot.params.id, 10));
     if (!!this.form) {
-      this.form = {
+     this.form = {
         name: '',
         date: null,
       };
@@ -61,7 +61,7 @@ export class ProductDetailComponent implements OnInit {
     }
   }
 
-  //this.route.paramMap.subscribe(value =>console.log(value));
+  // this.route.paramMap.subscribe(value =>console.log(value));
 
   // console.log(this.route.snapshot.params.id, 'Por path');
 

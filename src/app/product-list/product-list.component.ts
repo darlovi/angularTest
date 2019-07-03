@@ -1,8 +1,8 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {IsodatePipe} from '../isodate.pipe';
-import {ListService} from '../list.service';
+import {IsodatePipe} from '../shared/pipe/isodate.pipe';
+import {ListService} from '../shared/services/list.service';
 import {Router} from '@angular/router';
-import {state} from '@angular/animations';
+
 
 @Component({
   selector: 'app-product-list',
